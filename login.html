@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AluraGeek | Login</title>
+    <meta name="description" content="Página de login da AluraGeek. Entre na sua conta ou, caso ainda não possua uma, cadastre-se!">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap">
+
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+
+ 
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="lado-esquerdo">
+            <a href="index.html">
+                <img src="assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
+            </a>
+            <div class="ajuste-barra-pesquisa">
+                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+                <ul id="resultadosPesquisa"></ul>
+            </div>
+        </div>
+        <div class="lado-direito">
+            <div class="lupa">
+                <button class="botao-lupa">
+                    <img src="assets/image/header/search/lupa.svg">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login">
+            <form action="" class="form__login form-padrao">
+                <p class="form__titulo form__descricao--destaque">Iniciar sessão</p>
+
+                <fieldset class="form__campo form__campo--login">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="login__email" 
+                        class="campo__texto campo__texto--input" 
+                        placeholder="Digite seu email" 
+                        data-tipo="email" 
+                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                        autofocus required
+                    >
+
+                    <label for="login__email" class="campo__label">Email</label>
+                    <span class="form__erro"></span>
+                </fieldset>
+                    
+                <fieldset class="form__campo form__campo--login">
+                    <input 
+                        type="password"
+                        name="senha" 
+                        id="login__senha" 
+                        class="campo__texto campo__texto--input" 
+                        placeholder="Digite sua senha" 
+                        data-tipo="senha" 
+                        maxlength="12" 
+                        required
+                    >
+                    <label for="login__senha" class="campo__label">Senha</label>
+                    <span class="form__erro"></span>
+                </fieldset>
+
+                <fieldset class="form__campo--botoes">
+                    <button type="submit" class="form__btn--grande btn-padrao btn-cor-1">Entrar</button>
+                    <a href="#" class="form__btn--grande btn-padrao btn-cor-2" role="button">Cadastre-se</a>
+                </fieldset>
+            </form>   
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-ajuste-container">
+                <div class="footer-lado-esquerdo">
+                    <img src="assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
+                    <nav>
+                        <ul>
+                            <li><a href="">Quem somos nós</a></li>
+                            <li><a href="">Política de privacidade</a></li>
+                            <li><a href="">Programa fidelidade</a></li>
+                            <li><a href="">Nossas lojas</a></li>
+                            <li><a href="">Quero ser franqueado</a></li>
+                            <li><a href="">Anuncie aqui</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <form class="form-footer" onsubmit="return validateForm()">
+                    <span>Fale conosco</span>
+                    <div class="input-nome">
+                        <input class="footer-input-required" name="name" required>
+                        <label>Nome</label>
+                    </div>
+                    <div class="ajuste-textarea">
+                        <div class="div-textarea">
+                            <textarea class="footer-textarea-required" name="message" required></textarea>
+                            <label>Escreva sua mensagem</label>
+                        </div>
+                    </div>
+                    <span id="error-msg" style="display: none; color: red;"></span>
+                    <span id="success-msg" style="display: none; color: green;"></span>
+                    <button class="botao-footer" type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+        <div class="creditos-desenvolvedor">
+            <span>
+                Desenvolvido por Gideon Alves 
+            </span>
+            <div class="icon">
+                <span>
+                    2023
+                </span>
+                <a href="https://github.com/gideonalves?tab=repositories" target="_blank">
+                    <img src="assets/image/footer/icon/github.png" class="github">
+                </a>
+            </div>
+        </div>
+      </footer>
+    <!-- Fim rodapé -->
+
+    <script src="assets/services/js/login.js"></script>
+    <!-- <script src="assets/services/js/barraPesquisa.js"></script> -->
+   
+</body>
+</html>

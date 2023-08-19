@@ -1,0 +1,16 @@
+main {
+    background: var(--cinza-claro);
+}
+
+.protutos {
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: none;
+}
+
+/* .produto__categoria {
+    margin-top: 64px;
+} */

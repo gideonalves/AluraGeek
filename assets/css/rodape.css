@@ -1,0 +1,19 @@
+
+.rodape {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    background: var(--branco);
+}
+
+.redes {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.redes__link:hover,
+.redes__link:focus {
+    transition: 0.3s;
+    opacity: 60%; 
+}

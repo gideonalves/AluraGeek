@@ -1,0 +1,21 @@
+.login {
+    background: var(--cinza-claro);
+    text-align: center;
+}
+
+.form__login {
+    max-width: 425px;
+    min-width: 275px;
+    margin: 2rem auto 2rem;
+}
+
+.form__campo--login {
+    margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 550px) {
+    .login {
+        padding: 92px 10px;
+    }
+}

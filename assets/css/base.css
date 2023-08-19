@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway" ,sans-serif;
+}
+
+:root {
+    --azul: #0050b9;
+    --azul-claro: #EAF2FD;
+    --cinza-medio: #A2A2A2;
+    --cinza-claro: #F5F5F5;
+    --branco: #FFF;
+    --vermelho: #B72E2E;
+    --verde: #329542;
+
+    --cor-fonte: #464646; /*--preto-100*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--cor-fonte);
+}
+
+.pular-navegacao {
+    display: block;
+    text-indent: 100%;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    color: transparent;
+    position: absolute;
+}
+
+.pular-navegacao:focus {
+    transition: 0.5s ease-in;
+    text-indent: 10px;
+    width: 320px;
+    height: 25px;
+    padding-top: 0.5rem;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--branco);
+    background-color: var(--azul);
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+
+    /* width: 100%; */
+    padding: 3rem;
+}
+
+.btn-padrao {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 226px;
+    height: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border: 1px solid var(--azul);
+    border-radius: 7px;
+    box-shadow: 2px 5px 12px 5px #00000025;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-padrao:hover,
+.btn-padrao:focus {
+    box-shadow: 7px 10px 17px 5px #00000045;
+}
+
+.btn-cor-1 {
+    color: var(--branco);
+    background-color: var(--azul);
+}
+
+.btn-cor-1:hover,
+.btn-cor-1:focus {
+    color: var(--azul);
+    background-color: var(--branco);
+}
+
+.btn-cor-2 {
+    color: var(--azul);
+    background-color: var(--branco);
+}
+
+.btn-cor-2:hover,
+.btn-cor-2:focus {
+    color: var(--branco);
+    background-color: var(--azul);
+}
+
+.titulo-padrao {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        /* width: 90%; */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .btn-padrao {
+        font-size: 1rem;
+        padding: 0.5rem;
+        width: 175px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .btn-padrao {
+        width: 210px;
+        height: 45px;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width:400px) { 
+    .container {
+        width: 90%;
+        padding: 0;
+    }
+}
+

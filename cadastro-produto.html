@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de produto</title>
+    <meta name="description" content="AluraGeek, sua loja online de produtos Geek e Nerd especialmente selecionados. Cadastre um novo produto!">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap">
+    
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/barraPesquisa.css">
+    <link rel="stylesheet" href="/assets/css/contato.css">
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link rel="stylesheet" href="/assets/css/rodape.css">
+    <link rel="stylesheet" href="/assets/css/cadastra-edicao-produto.css">
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="lado__esquerdo">
+            <a 
+                href="index.html"
+                class="cabecalho__link" 
+                title="Home Alura Geek"
+            >
+            <img src="assets/img/logo-alurageek.svg" alt="Logo Alura Geek" class="cabecalho__img">
+            </a>
+
+            <div class="ajuste-barra-pesquisa">
+                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+                <ul id="resultadosPesquisa"></ul>
+            </div>
+        </div>
+
+        <div class="lado-direito">
+         
+            
+            <div class="lupa">
+                <button class="botao-lupa">
+                    <img src="./assets/img/lupa.svg">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cadastra-produto container" id="conteudo-principal">
+                <form action="" class="cadastro-produto__form form-padrao">
+                    <p class="form__titulo form__descricao--destaque">Adicionar novo produto</p>
+
+                    <fieldset class="form__campo">
+                        <input type="text" 
+                            class="campo__texto campo__texto--input" 
+                            id="cadastro-produto__imagem" 
+                            name="imagem" 
+                            placeholder="Digite o endereço URL da imagem" 
+                            data-tipo="urlImagem" 
+                            required
+                        >
+                        <label for="cadastro-produto__imagem" class="campo__label">URL da imagem</label>
+                        <span class="form__erro"></span>
+                    </fieldset>
+
+                    <fieldset class="form__campo">
+                        <input 
+                            type="text" 
+                            class="campo__texto campo__texto--input" 
+                            id="cadastro-produto__alt" 
+                            name="alt" 
+                            placeholder="Digite a descrição da imagem do produto" 
+                            data-tipo="alt" 
+                            required
+                        >
+                        <label for="cadastro-produto__alt" class="campo__label">Descrição da imagem</label>
+                        <span class="form__erro"></span>
+                    </fieldset>
+
+                    <fieldset class="form__campo">
+                        <input 
+                            type="text" 
+                            class="campo__texto campo__texto--input" 
+                            id="cadastro-produto__nome-produto" 
+                            name="nome-produto" 
+                            placeholder="Digite o nome do produto" 
+                            data-tipo="nomeProduto" 
+                            maxlength="21" 
+                            required
+                        >
+                        <label for="cadastro-produto__nome-produto" class="campo__label">Nome do produto</label>
+                        <span class="form__erro"></span>
+                    </fieldset>
+
+                    <fieldset class="form__campo">
+                        <input 
+                            type="number" 
+                            class="campo__texto campo__texto--input" 
+                            id="cadastro-produto__preco" 
+                            name="preco" 
+                            placeholder="Digite o preco do produto" 
+                            data-tipo="preco" 
+                            pattern="^([\d]+[.][\d]{0,2})|([\d]+)$" 
+                            min="0.01" 
+                            step="any" 
+                            required
+                        >
+                        <label for="cadastro-produto__preco" class="campo__label">Preço do produto</label>
+                        <span class="form__erro"></span>
+                    </fieldset>
+
+                    <fieldset class="form__campo">
+                        <textarea 
+                            name="descricao" 
+                            class="campo__texto campo__texto--textarea" 
+                            id="cadastro-produto__descricao" 
+                            cols="30" rows="10" 
+                            placeholder="Descreva o produto" 
+                            data-tipo="descricao" 
+                            maxlength="200" 
+                            required
+                        >
+                        </textarea>
+                        <label for="cadastro-produto__descricao" class="campo__label">Descrição do produto</label>
+                        <span class="form__erro"></span>
+                    </fieldset>
+
+                    <fieldset class="form__campo--botoes">
+                        <button type="submit" class="form__btn--grande btn-padrao btn-cor-1">Adicionar produto</button>
+                        <a href="produtos.html" class="form__btn--grande btn-padrao btn-cor-2">Voltar</a>
+                    </fieldset>
+            </form>
+        </section>
+        <!-- Fim cadastro de produto -->
+    </main> 
+
+    <footer>
+        <section class="contato"> 
+            <div class="contato-divisao">
+                <img src="/assets/img/logo-alurageek.svg" alt="Logotipo da loja Alura Geek" width="180" height="50" class="contato__logo">
+
+                <nav class="nav">
+                    <ul class="nav__lista">
+                        <li class="nav__item"><a href="#" class="nav__link">Quem somos</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Política de privacidade</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Programa fidelidade</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Nossas lojas</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Quero ser franqueado</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Anuncie aqui</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <form action="" class="contato__form form-padrao">
+                <p class="form__descricao"><strong class="form__descricao--destaque">Fale conosco!</strong><br>Preencha os campos abaixo e envie sua mensagem</p>
+
+                <fieldset class="form__campo">
+                    <input type="text" class="campo__texto campo__texto--input" id="contato__nome" name="name" placeholder="Digite seu nome" data-tipo="nome" maxlength="25" required>
+                    <label for="contato__nome" class="campo__label">Nome</label>
+                    <span class="form__erro"></span>
+                </fieldset>
+                <fieldset class="form__campo">
+                    <textarea name="body" class="campo__texto campo__texto--textarea" id="contato__mensagem" cols="30" rows="10" placeholder="Digite sua mensagem" data-tipo="mensagem" maxlength="200" required></textarea>
+                    <label for="contato__mensagem" class="campo__label">Mensagem</label>
+                    <span class="form__erro"></span>
+                </fieldset>
+                <fieldset>
+                    <button type="submit" class="btn-padrao btn-cor-1">Enviar mensagem</button>
+                </fieldset>
+            </form>         
+        </section>
+        <!-- Fim contato -->
+        <section class="rodape">
+            <p class="creditos">&copy; Desenvolvido por Gideon Alves - 2023</p>
+
+            <ul class="redes">
+                <li>
+                    <a href="https://github.com/gideonalves" class="redes__link" title="Lucas da Paz | GitHub" target="_blank">
+                        <img src="/assets/img/redes/logo-github.svg" alt="Logo GitHub" width="45px" height="45px" class="redes__img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/gideon-alves/" class="redes__link" title="Lucas da Paz | LinkedIn" target="_blank">
+                        <img src="/assets/img/redes/logo-linkedin.svg" alt="Logo LinkedIn" width="45px" height="45px" class="redes__img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/luacspaz/" class="redes__link" title="Lucas da Paz | Instagram" target="_blank">
+                        <img src="/assets/img/redes/logo-instagram.png" alt="Logo Instagram" width="45px" height="45px" class="redes__img">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    <!-- Fim rodapé -->
+
+    <script src="assets/services/js/validacao-form.js"></script>
+    <script src="assets/services/js/cadastra-produto.js" type="module"></script>
+   
+</body>
+</html>

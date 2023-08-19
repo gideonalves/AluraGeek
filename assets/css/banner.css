@@ -1,0 +1,59 @@
+.banner__bg {
+    height: 340px;
+    background-image:  linear-gradient(180deg,transparent,rgba(0,0,0,.8)), url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.banner__conteudo {
+    /* max-width: 1220px;
+    width: 100%; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.8rem;
+    color: var(--branco);
+}
+
+.banner__titulo {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.banner__descricao {
+    font-size: 1.2rem;
+}
+
+.banner__link {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 670px) {
+    .banner__bg .banner__conteudo .banner__titulo{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:400px) { 
+
+    .banner__conteudo {
+        gap: 0.5rem;
+    }
+    
+    .banner__bg .banner__conteudo .banner__titulo{
+        font-size: 1.3rem;
+    }
+
+    .banner__bg .banner__conteudo .banner__descricao {
+        font-size: 0.815rem;
+    }
+
+    main .banner__bg {
+        height: 200px;
+    }
+}
